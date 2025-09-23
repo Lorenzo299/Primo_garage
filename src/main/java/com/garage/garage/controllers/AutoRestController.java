@@ -43,28 +43,28 @@ public class AutoRestController {
         return autoService.readAll();
     }
 
-    @GetMapping("/autoBrand/ {brand}")
+    @GetMapping("/autoBrand/{brand}")
     public List<Auto> getAutosByBrand(@PathVariable("brand") String brand) {
         return autoService.readByBrand(brand);
     }
 
-    @GetMapping("/autoCategory/ {category}")
+    @GetMapping("/autoCategory/{category}")
     public List<Auto> getAutosByCategory(@PathVariable("category") String category) {
         return autoService.readByCategory(category);
     }
 
-    @GetMapping("/autoColor/ {color}")
+    @GetMapping("/autoColor/{color}")
     public List<Auto> getAutosByColor(@PathVariable("color") String color) {
         return autoService.readByColor(color);
     }
 
-    @GetMapping("/autoNumDoors/ {ndoors}")
+    @GetMapping("/autoNumDoors/{ndoors}")
     public List<Auto> getAutosByNdoors(@PathVariable("ndoors") Integer ndoors) {
         return autoService.readByNdoors(ndoors);
     }
 
     @PutMapping("{id}")
-    public Auto updateAuto(@PathVariable("id") Long id, @RequestBody Auto auto) {
+    public Auto updateAuto(@RequestBody Auto auto, @PathVariable("id") Long id) {
         return autoService.update(auto, id);
     }
 }

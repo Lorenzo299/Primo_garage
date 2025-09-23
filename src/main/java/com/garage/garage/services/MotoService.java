@@ -22,5 +22,5 @@ public interface MotoService {
 
     List<Moto> readByCategory(String category);
 
-    List<Moto> readBySpeed(int speed);
+    List<Moto> readBySpeed(Integer speed);
 }

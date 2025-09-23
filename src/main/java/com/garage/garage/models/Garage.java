@@ -3,6 +3,8 @@ package com.garage.garage.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.CascadeType;
@@ -53,6 +55,29 @@ public class Garage {
 
         this.nameGarage = nameGarage;
 
+    }
+
+    // public void addAuto(Auto auto) {
+    // listaAuto.add(auto);
+    // auto.setGarage(this);
+    // }
+
+    // public void removeAuto(Auto auto) {
+    // listaAuto.remove(auto);
+    // auto.setGarage(null);
+    // }
+
+    // public void addMoto(Moto moto) {
+    // listaMoto.add(moto);
+    // moto.setGarage(this);
+    // }
+
+    // public void removeMoto(Moto moto) {
+    // listaMoto.remove(moto);
+    // moto.setGarage(null);
+    // }
+
+    public Garage() {
     }
 
     public Long getId() {

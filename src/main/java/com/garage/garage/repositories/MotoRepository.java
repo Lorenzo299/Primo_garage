@@ -14,6 +14,6 @@ public interface MotoRepository extends ListCrudRepository<Moto, Long> {
 
     List<Moto> findByCategory(String category);
 
-    List<Moto> findBySpeed(int speed);
+    List<Moto> findBySpeed(Integer speed);
 
 }
